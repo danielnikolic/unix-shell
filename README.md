@@ -12,6 +12,8 @@ cd <dir>     - change the working directory of the shell process
 pwd          - prints the current working directory
 ```
 
+The shell also supports various background processes such as ```ls``` or ```sleep```.
+
 ## Getting Started
 
 To see the project in action, you can either run the code in your own 

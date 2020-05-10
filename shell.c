@@ -6,10 +6,12 @@
 
 #include "shell.h"
 
+#define INPUT_LENGTH 100
+
 int main(int argc, char * argv[])
 {
 	char* prompt = "> ";
-	char input[100];
+	char input[INPUT_LENGTH];
 	
 	while (1)
 	{
@@ -29,6 +31,41 @@ int main(int argc, char * argv[])
 		else if (strcmp(input, "ppid") == 0)
 		{
 			printf("Parent Process ID: %d\n", getppid());
+		}
+		else if (strncmp(input, "cd", 2) == 0)
+		{
+			if (strlen(input) == 2)
+			{
+				chdir(getenv("HOME"));
+			}
+			else
+			{
+				char dir[strlen(input) - 3];
+				strcpy(dir, input + 3);
+				
+				int status = chdir(dir);
+				
+				if (status == -1)
+				{
+					printf("Invalid directory\n");
+				}
+			}
+		}
+		else if (strcmp(input, "pwd") == 0)
+		{
+			char cwd[INPUT_LENGTH];
+			if (getcwd(cwd, sizeof(cwd)) != NULL)
+			{
+				printf("%s\n", cwd);
+			}
+			else
+			{
+				printf("Could not find working directory\n");
+			}
+		}
+		else
+		{
+			
 		}
 		
 		printf("\n");
