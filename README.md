@@ -2,7 +2,7 @@
 
 A shell is a terminal-like environment that accepts commands from a user. 
 This UNIX shell is a particular version that is designed for the Linux operating system. 
-Below are some examples of functionality that my implementation in C supports:
+Below are some built-in commands that my implementation in C supports:
 
 ```
 exit         - terminates the shell process
@@ -12,7 +12,7 @@ cd <dir>     - change the working directory of the shell process
 pwd          - prints the current working directory
 ```
 
-The shell also supports various background processes such as ```ls``` or ```sleep```.
+The shell also supports various program commands such as ```ls``` or ```touch```.
 
 ## Getting Started
 
