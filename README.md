@@ -18,3 +18,5 @@ The shell also supports various program commands such as ```ls``` or ```touch```
 
 To see the project in action, you can either run the code in your own 
 terminal or view a screenshot below that demonstrates the project.
+
+![UNIX Shell](https://github.com/danielnikolic/unix-shell/blob/master/UNIX-Shell.PNG)

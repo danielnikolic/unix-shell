@@ -149,7 +149,7 @@ void removeExtraSpace(char input[])
 		while (k == 0 && i < n && input[i] == ' ') 
 		{
 			i++;
-        }
+		}
 
 		if (input[i] == ' ')
 		{
@@ -163,8 +163,8 @@ void removeExtraSpace(char input[])
 		{
 			input[k++] = input[i];
 			space = 0;
-        }
-    }
+		}
+	}
 	
 	if (input[n - 1] == ' ')
 	{
