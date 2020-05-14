@@ -72,7 +72,7 @@ int main(int argc, char * argv[])
 				printf("Could not find working directory\n");
 			}
 		}
-		else
+		else // check to see if user entered a Linux program command
 		{
 			int argumentCount = getArgumentCount(input);
 			
